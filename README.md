@@ -15,15 +15,14 @@ Chaincode-as-a-Service (CCAAS) model.
 2. SETUP & INSTALLATION
 ---
 1. Download the Project:
-   $ git clone <YOUR_REPOSITORY_URL>
-   $ cd fabric-samples
+   $ git clone https://github.com/Nalu70/Car-Ownership-Tracking.git
 
 2. Prepare Chaincode:
-   $ cd ~/fabric-samples/asset-transfer-basic/chaincode-go
+   $ cd ~/asset-transfer-basic/chaincode-go
    $ go mod tidy && go mod vendor
 
 3. Prepare Backend & Identities:
-   $ cd ~/fabric-samples/fabcar-backend
+   $ cd ~/fabcar-backend
    $ npm install
    
    # IDENTITY BOOTSTRAP (Crucial Step):
@@ -34,7 +33,7 @@ Chaincode-as-a-Service (CCAAS) model.
    $ node initWallet.js 
 
 4. Prepare Frontend:
-   $ cd ~/fabric-samples/fabcar_frontend/fabcar_frontend
+   $ cd ~/fabcar_frontend/fabcar_frontend
    $ npm install
 
 ---
@@ -42,11 +41,11 @@ Chaincode-as-a-Service (CCAAS) model.
 ---
 
 OPTION A: FRESH START (Wipes old data and starts new)
-$ cd ~/fabric-samples/test-network
+$ cd ~/test-network
 $ ./start_fabric.sh
 
 OPTION B: RESUME NETWORK (Restarts existing containers without wiping data)
-$ cd ~/fabric-samples/test-network
+$ cd ~/test-network
 $ ./resume_fabric.sh
 
 ---
@@ -54,11 +53,11 @@ $ ./resume_fabric.sh
 ---
 1. Start API Server:
    # Ensure initWallet.js was already run once before this
-   $ cd ~/fabric-samples/fabcar-backend
+   $ cd ~/fabcar-backend
    $ node index.js
 
 2. Start Web UI:
-   $ cd ~/fabric-samples/fabcar_frontend/fabcar_frontend
+   $ cd ~/fabcar_frontend/fabcar_frontend
    $ npm run dev
 
 ---
@@ -67,5 +66,5 @@ $ ./resume_fabric.sh
 - If 'npm run dev' shows "Permission Denied", run: 
   $ chmod -R +x node_modules/.bin
 - Ensure 'nvm use 22' is active before starting the frontend.
-- Chaincode logs can be found at: ~/fabric-samples/test-network/chaincode.log
+- Chaincode logs can be found at: ~/test-network/chaincode.log
 ===========================================================================
