@@ -1,0 +1,21 @@
+{
+  "name": "my-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "fabric-ca-client": "^2.2.20",
+    "fabric-network": "^2.2.20",
+    "nodemailer": "^8.0.2"
+  }
+}
